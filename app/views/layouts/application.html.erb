@@ -8,9 +8,22 @@
                                'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 
                                'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+      <div class="container">
+        <%= link_to "Attendance App", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Top",   '#' %></li>
+            <li><%= link_to "Log in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
     <%= yield %>
   </body>
 </html>
